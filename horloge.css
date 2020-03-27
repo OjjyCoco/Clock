@@ -1,0 +1,115 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    height: 100vh;
+    width: 100%;
+    background-color: rgb(169, 208, 224);
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    align-items: center;
+}
+
+#local_time{
+    font-size: 20px;
+    text-align: center;
+    border-bottom: 1px solid black;
+}
+
+#cadran{
+    width: 400px;
+    height: 400px;
+    border-radius: 50%;
+    background-image: url('cadran.jpg');
+    background-position: center;
+    background-repeat: none;
+    background-size: cover;
+    position: relative;
+}
+#center{
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    background-color: black;
+    border-radius: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 10;
+    animation: bigger 1s ease-in-out infinite paused;
+}
+@keyframes bigger{
+    0%{
+        width: 20px;
+        height: 20px;
+    }
+    50%{
+        width: 150px;
+        height: 150px;
+    }
+    100%{
+        width: 20px;
+        height: 20px;
+    }
+}
+#heure{
+    width: 6px;
+    height: 25%;
+    border-radius: 10px;
+    background-color: black;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform-origin: bottom;
+    transform: translate(-50%, -100%);
+    transition: 300ms all ease-in-out;
+}
+#minute{
+    width: 4px;
+    height: 45%;
+    border-radius: 10px;
+    background-color: red;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform-origin: bottom;
+    transform: translate(-50%, -100%);
+    transition: 300ms all ease-in-out;
+}
+#seconde{
+    width: 2px;
+    height: 50%;
+    border-radius: 10px;
+    background-color: blue;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform-origin: bottom;
+    transform: translate(-50%, -100%);
+}
+#digitseconde{
+    width: 2px;
+    height: 50%;
+    border-radius: 10px;
+    background-color: orange;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform-origin: bottom;
+    transform: translate(-50%, -100%);
+}
+
+#runner{
+    font-family: 'Police';
+    font-size: 60px;
+    text-align: center;
+}
+
+@font-face
+{
+    font-family: 'Police';
+    src: url('BLADRMF_.ttf');
+}

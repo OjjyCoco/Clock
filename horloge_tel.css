@@ -1,0 +1,12 @@
+#runner{
+    font-size: 25px;
+}
+
+#local_time{
+    border: none;
+}
+
+#cadran{
+    width:300px;
+    height: 300px;
+}
